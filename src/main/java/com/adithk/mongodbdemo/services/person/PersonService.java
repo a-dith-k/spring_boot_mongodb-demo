@@ -12,4 +12,10 @@ public interface PersonService {
     public List<PersonEntity> getAllUsers();
 
     public PersonEntity findUserById();
+
+    List<PersonEntity> getPersonNameStartsWith(String name);
+
+    void deletePersonById(String id);
+
+    List<PersonEntity> getPersonAgeBetween(int minAge, int maxAge);
 }

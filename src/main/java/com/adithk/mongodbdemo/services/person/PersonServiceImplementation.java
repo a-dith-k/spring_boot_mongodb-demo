@@ -29,4 +29,19 @@ public class PersonServiceImplementation implements PersonService {
        throw new UnsupportedOperationException("Not yet Implemented");
     }
 
+    @Override
+    public List<PersonEntity> getPersonNameStartsWith(String name) {
+        return personRepository.findPersonEntitiesByFirstNameStartsWith(name);
+    }
+
+    @Override
+    public void deletePersonById(String id) {
+        personRepository.deleteById(id);
+    }
+
+    @Override
+    public List<PersonEntity> getPersonAgeBetween(int minAge, int maxAge) {
+        return personRepository.findPersonAgeBetween(minAge, maxAge);
+    }
+
 }
